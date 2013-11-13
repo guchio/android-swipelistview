@@ -678,4 +678,7 @@ public class SwipeListView extends ListView {
         touchListener.closeOpenedItems();
     }
 
+    public SwipeListViewTouchListener getTouchListener() {
+        return touchListener;
+    }
 }
