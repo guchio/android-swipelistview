@@ -1036,4 +1036,8 @@ public class SwipeListViewTouchListener implements View.OnTouchListener {
 
     }
 
+  public void refreshViewWidth() {
+    this.viewWidth = 1;
+  }
+
 }

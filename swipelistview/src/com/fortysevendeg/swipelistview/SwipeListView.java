@@ -681,4 +681,9 @@ public class SwipeListView extends ListView {
     public SwipeListViewTouchListener getTouchListener() {
         return touchListener;
     }
+
+    public void refreshViewWidth() {
+      touchListener.refreshViewWidth();
+    }
+
 }
