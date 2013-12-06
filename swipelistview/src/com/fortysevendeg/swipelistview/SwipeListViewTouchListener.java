@@ -679,11 +679,15 @@ public class SwipeListViewTouchListener implements View.OnTouchListener {
      * Close all opened items
      */
     void closeOpenedItems() {
+        closeOpenedItems(-1);
+    }
+
+    void closeOpenedItems(int position) {
         if (opened != null) {
             int start = swipeListView.getFirstVisiblePosition();
             int end = swipeListView.getLastVisiblePosition();
             for (int i = start; i <= end; i++) {
-                if (opened.get(i)) {
+                if (i != position && opened.get(i)) {
                     closeAnimate(swipeListView.getChildAt(i - start).findViewById(swipeFrontView), i);
                 }
             }
